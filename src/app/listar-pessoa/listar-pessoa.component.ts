@@ -1,6 +1,7 @@
-import { Component } from '@angular/core';
-import { PersonService } from './person.service';
+import { Component, OnInit, ChangeDetectionStrategy } from '@angular/core';
+import { PersonService } from '../person.service';
 import { MatTableDataSource } from '@angular/material';
+
 
 export interface iPerson {
   id: string;
@@ -9,13 +10,15 @@ export interface iPerson {
   acao: string;
 }
 
+
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: 'app-listar-pessoa',
+  templateUrl: './listar-pessoa.component.html',
+  styleUrls: ['./listar-pessoa.component.css'],
+  changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class AppComponent {
-  title = 'Teste de Software';
+export class ListarPessoaComponent implements OnInit {
+
   public dataSource;
   displayedColumns: string[] = ['id', 'nome', 'sexo', 'acao'];
 
@@ -26,10 +29,12 @@ export class AppComponent {
     this.dataSource = new MatTableDataSource(this.personService.getAllPerson());
   }
 
+  ngOnInit() {
+  }
+
   
   applyFilter(filterValue: string) {
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
-
-
+ 
 }
