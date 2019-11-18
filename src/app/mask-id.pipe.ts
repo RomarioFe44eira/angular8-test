@@ -5,8 +5,16 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class MaskIdPipe implements PipeTransform {
 
-  transform(value: any, ...args: any[]): any {
-    return null;
-  }
+  transform(id: any): string {
+    let idTexto: string = String(id);
+
+    if (idTexto.length !== 13) {
+        return idTexto;
+    }
+
+    return idTexto.substr(0, 4) + '-' +
+           idTexto.substr(4, 7) + '/' + 
+           idTexto.substr(11, 2);
+}
 
 }

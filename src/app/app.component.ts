@@ -31,8 +31,6 @@ export class AppComponent {
     this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 
-  helloworld(){
-    return 'Hello world';
-  }
+ 
 
 }

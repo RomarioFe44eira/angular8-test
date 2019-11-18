@@ -18,39 +18,25 @@ describe('AppComponent', () => {
     }).compileComponents();
   }));
 
-  it('Deve criar o app', () => {
+  it('Deve instânciar o componente app', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app).toBeTruthy();
   });
 
- it(`Deve criar um titulo 'Teste de Software' no componente`, () => {
+ it(`Deve possuir um titulo 'Teste de Software' na variável title do componente`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app.title).toEqual('Teste de Software');
   }); 
 
 
- /*  // Deve renderizar o titulo na view
-  it('Deve renderizar o titulo para que o usuário visualize', () => {
+  // Deve renderizar o titulo na view
+  it('Deve renderizar o titulo no toolbar', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('h1').textContent).toContain('Angular 8 - Teste de Software');
-  });
-
-
-  it('Deve inicializar o titulo e subtitulo do mat-card', ()=>{
-    const fixture = TestBed.createComponent(AppComponent);
-    fixture.detectChanges();
-    const compiled = fixture.debugElement.nativeElement;
-    expect(compiled.querySelector('p').textContent).toContain('Listagem de pessoas');
-    expect(compiled.querySelector('span').textContent).toContain('Apresenta todas as pessoas cadastradas');
-  }) */
-
-
-  it('Deve retornar "Hello world"', () => {
-    expect(helloworld()).toEqual('Hello world');
+    expect(compiled.querySelector('span').textContent).toContain('Angular 8 - Teste de Software');
   });
 
 

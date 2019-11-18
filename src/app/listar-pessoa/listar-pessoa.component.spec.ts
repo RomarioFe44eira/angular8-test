@@ -19,7 +19,7 @@ describe('ListarPessoaComponent', () => {
     fixture.detectChanges();
   });
 
-  xit('should create', () => {
+  xit('Deve instânciar listarPessoas', () => {
     expect(component).toBeTruthy();
   });
 });
