@@ -3,13 +3,15 @@ import { CommonModule } from '@angular/common';
 
 import { AuthRoutingModule } from './auth-routing.module';
 import { LoginComponent } from './login/login.component';
+import { Material } from '../material';
 
 
 @NgModule({
   declarations: [LoginComponent],
   imports: [
     CommonModule,
-    AuthRoutingModule
+    AuthRoutingModule,
+    Material
   ],
   exports: [LoginComponent]
 })

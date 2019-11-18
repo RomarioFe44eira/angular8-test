@@ -24,14 +24,14 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`Deve criar um titulo 'Teste de Software' no componente`, () => {
+ it(`Deve criar um titulo 'Teste de Software' no componente`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.debugElement.componentInstance;
     expect(app.title).toEqual('Teste de Software');
-  });
+  }); 
 
 
-  // Deve renderizar o titulo na view
+ /*  // Deve renderizar o titulo na view
   it('Deve renderizar o titulo para que o usuário visualize', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
@@ -46,7 +46,7 @@ describe('AppComponent', () => {
     const compiled = fixture.debugElement.nativeElement;
     expect(compiled.querySelector('p').textContent).toContain('Listagem de pessoas');
     expect(compiled.querySelector('span').textContent).toContain('Apresenta todas as pessoas cadastradas');
-  })
+  }) */
 
 
 });
