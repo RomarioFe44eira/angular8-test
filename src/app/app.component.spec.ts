@@ -49,4 +49,9 @@ describe('AppComponent', () => {
   }) */
 
 
+  it('Deve retornar "Hello world"', () => {
+    expect(helloworld()).toEqual('Hello world');
+  });
+
+
 });

@@ -1,15 +1,20 @@
 
-mat-card{
-    width: 70%;
-    margin: 1% auto;
-}
-
-
-table {
-    width: 100%;
+.example-icon {
+    padding: 0 14%;
 }
   
-.mat-form-field {
-    font-size: 14px;
-    width: 100%;
+.example-spacer {
+    flex: 1 1 auto;
+}
+
+
+.breadcrumber{
+    height: 30px;
+    padding-left: 25%;  
+    background: rgba(0, 0, 0, 0.904);
+}
+
+.example-button-row button,
+.example-button-row a {
+  margin-right: 8px;
 }

@@ -1,8 +1,10 @@
 form{
-    width: 50%;
+    width: 40%;
     margin: 2% auto;
     background: gray;
     padding: 4%;
+    border-radius: 12px;
+    border: 1px solid;
 }
 
 label {
